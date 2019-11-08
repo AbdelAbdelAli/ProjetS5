@@ -1,0 +1,33 @@
+<h3>Create Dossier</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name"> numDossier</label>
+      <input type="text" class="form-control" id="numDossier" required [(ngModel)]="dossier.numDossier" name="numDossier">
+    </div>
+
+    <div class="form-group">
+      <label for="name">DATE</label>
+      <input type="text" class="form-control" id="date" required [(ngModel)]="dossier.date" name="date">
+    </div>
+
+    <div class="form-group">
+      <label for="name">nomPatient</label>
+      <input type="text" class="form-control" id="nomPatient" required [(ngModel)]="dossier.nomPatient" name="nomPatient">
+    </div>
+
+    <div class="form-group">
+      <label for="name">telPatient</label>
+      <input type="text" class="form-control" id="telPatient" required [(ngModel)]="dossier.telPatient" name="telPatient">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button (click)="List()" class="btn btn-info" style="margin-left: 10px">List</button>
+
+  <!-- <button class="btn btn-success" (click)="newDossier()">Add</button> -->
+</div>

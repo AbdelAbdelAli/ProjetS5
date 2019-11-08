@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>List des Rendez-vous     </h2>
+    <h3 style="margin-left: 900px;">    <button (click)="add()" class="btn btn-info" style="margin-left: 10px">Ajouter Un Rendez-vous</button>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Date</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rdv of rdvs | async">
+          <td>{{rdv.name}}</td>
+          <td>{{rdv.date}}</td>
+          <td>{{rdv.emailId}}</td>
+          <td><button (click)="deleteRdv(rdv.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateRdv(rdv.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="rdvDetails(rdv.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+<h3>Create Rdv</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name"> Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="rdv.name" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">DATE</label>
+      <input type="text" class="form-control" id="date" required [(ngModel)]="rdv.date" name="date">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="rdv.emailId" name="emailId">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button (click)="List()" class="btn btn-info" style="margin-left: 10px">List</button>
+
+  <!-- <button class="btn btn-success" (click)="newRdv()">Add</button> -->
+</div>

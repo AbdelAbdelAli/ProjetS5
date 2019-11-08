@@ -1,0 +1,20 @@
+<h2>Rdv Details</h2>
+
+<hr/>
+<div *ngIf="rdv">
+  <div>
+    <label><b> Name: </b></label> {{rdv.name}}
+  </div>
+  <div>
+    <label><b>date: </b></label> {{rdv.date}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{rdv.emailId}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Rdv List</button><br>
+
+

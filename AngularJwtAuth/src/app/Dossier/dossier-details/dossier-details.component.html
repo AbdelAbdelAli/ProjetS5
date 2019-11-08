@@ -1,0 +1,23 @@
+<h2>Dossier Details</h2>
+
+<hr/>
+<div *ngIf="dossier">
+  <div>
+    <label><b> numDossier: </b></label> {{dossier.numDossier}}
+  </div>
+  <div>
+    <label><b>date: </b></label> {{dossier.date}}
+  </div>
+  <div>
+    <label><b>nomPatient: </b></label> {{dossier.nomPatient}}
+  </div>
+  <div>
+    <label><b>telPatient: </b></label> {{dossier.telPatient}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Dossier List</button><br>
+
+
